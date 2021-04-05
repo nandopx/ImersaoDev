@@ -1,0 +1,55 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+    <script type="text/javascript" src="javascript/script.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="page-title">
+            Conversor de medidas
+        </h1>
+        <p class="page-subtitle">
+            Cálculo de conversão de moedas, temperaturas e distancia entre estrelas
+        </p>
+        <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-conversor-de-moedas.svg" class="page-logo" alt="">
+        <div class="conversores">
+            <div class="div-label">
+                <h3>
+                    <span>Conversor de Dollar ($) para Real (R$)</span>
+                </h3>
+                <input class="input-style" type="text" id="dollarToReal">
+                <input class="button-style" type="submit" onclick="converterParaReal()" value="Converter">
+                <h3 id="resultadoMoeda" class="resultado"></h3>
+            </div>
+            <hr style="border-color: transparent;">
+            <div class="div-label">
+                <h3>
+                    <span>Conversor de Celcius (°C) para Fahrenheit (°F)</span>
+                </h3>
+                <input class="input-style" type="text" id="CelsiusToFar">
+                <input class="button-style" type="submit" onclick="CelciusParaFahrenheit()" value="Converter">
+                <h3 id="resultadoTemperatura" class="resultado"></h3>
+            </div>
+            <hr style="border-color: transparent;">
+            <div class="div-label">
+                <h3>
+                    <span>Conversor interestrelar (Anos-luz para KM)</span>
+                </h3>
+                <input class="input-style" type="text" id="anosLuzToKm">
+                <input class="button-style" type="submit" onclick="AnosLuzParaKM()" value="Converter">
+                <h3 id="resultadoDistancia" class="resultado"></h3>
+            </div>
+        </div>
+    </div>
+    <a href="https://alura.com.br/" target="_blank">
+        <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
+    </a>
+</body>
+
+</html>
