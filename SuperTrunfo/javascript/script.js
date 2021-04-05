@@ -81,7 +81,6 @@ var cartaMarvel = {
 var cartaMaquina
 var cartaJogador
 var cartas = [cartaPaulo, cartaRafa, cartaGui, cartaLol, cartaNaruto, cartaHarry, cartaBatman, cartaMarvel]
-    //            0           1           2          3         4            5            6           7     
 
 var pontosJogador = 0
 var pontosMaquina = 0
@@ -91,7 +90,7 @@ atualizaQuantidadeDeCartas()
 
 function atualizaQuantidadeDeCartas() {
     var divQuantidadeDeCartas = document.getElementById('quantidade-cartas')
-    var html = "Quantidade de cartas no jogo: " + cartas.length
+    var html = "Cartas restante no jogo: " + cartas.length
     divQuantidadeDeCartas.innerHTML = html
 }
 
@@ -112,6 +111,7 @@ function sortearCarta() {
 
     document.getElementById('btnSortear').disabled = true
     document.getElementById('btnJogar').disabled = false
+    atualizaQuantidadeDeCartas()
     exibeCartaJogador()
 }
 
@@ -145,23 +145,23 @@ function jogar() {
     var atributoSelecionado = obtemAtributoSelecionado()
 
     if (cartaJogador.atributos[atributoSelecionado] > cartaMaquina.atributos[atributoSelecionado]) {
-        htmlResultado = '<p class="resultado-final">Venceu</p>'
+        htmlResultado = '<p class="resultado-final">Venceu rodada!</p>'
         pontosJogador++
     } else if (cartaJogador.atributos[atributoSelecionado] < cartaMaquina.atributos[atributoSelecionado]) {
-        htmlResultado = '<p class="resultado-final">Perdeu</p>'
+        htmlResultado = '<p class="resultado-final">Perdeu rodada!</p>'
         pontosMaquina++
     } else {
-        htmlResultado = '<p class="resultado-final">Empatou</p>'
+        htmlResultado = '<p class="resultado-final">Empatou rodada!</p>'
     }
 
     if (cartas.length == 0) {
         alert("Fim de jogo!")
         if (pontosJogador > pontosMaquina) {
-            htmlResultado = "<p class='resultado-final'>Venceu!</p>"
+            htmlResultado = "<p class='resultado-final'>Venceu partida!</p>"
         } else if (pontosJogador < pontosMaquina) {
-            htmlResultado = "<p class='resultado-final'>Perdeu!</p>"
+            htmlResultado = "<p class='resultado-final'>Perdeu partida!</p>"
         } else {
-            htmlResultado = "<p class='resultado-final'>Empate!</p>"
+            htmlResultado = "<p class='resultado-final'>Empate partida!</p>"
         }
     } else {
         document.getElementById('btnProximaRodada').disabled = false
@@ -172,7 +172,6 @@ function jogar() {
 
     atualizaPlacar()
     exibeCartaMaquina()
-    atualizaQuantidadeDeCartas()
 }
 
 function exibeCartaMaquina() {
