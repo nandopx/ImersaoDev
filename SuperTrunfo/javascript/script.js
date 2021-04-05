@@ -143,6 +143,7 @@ function obtemAtributoSelecionado() {
 function jogar() {
     var divResultado = document.getElementById("resultado")
     var atributoSelecionado = obtemAtributoSelecionado()
+    var htmlResultado = ""
 
     if (cartaJogador.atributos[atributoSelecionado] > cartaMaquina.atributos[atributoSelecionado]) {
         htmlResultado = '<p class="resultado-final">Venceu rodada!</p>'
@@ -200,4 +201,5 @@ function proximaRodada() {
 
     var divResultado = document.getElementById('resultado')
     divResultado.innerHTML = ""
+    sortearCarta()
 }
