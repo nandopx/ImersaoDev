@@ -55,6 +55,10 @@ a {
     text-indent: 0%;
 }
 
+.container ol li a:hover {
+    font-size: 25px;
+}
+
 img {
     width: 150px;
     height: 150px;
