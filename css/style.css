@@ -43,8 +43,16 @@ a {
     text-indent: 1cm;
 }
 
+.container h2 {
+    text-indent: 0%;
+}
+
+.container p {
+    text-indent: 0%;
+}
+
 .container ol li {
-    text-indent: 0cm;
+    text-indent: 0%;
 }
 
 img {
